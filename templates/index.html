@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+
+<html lang="en">
+	<head>
+		<title>Qulay Taxi</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="{% static 'images/favicon.ico' %}">
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+		<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+		<link rel="stylesheet" href="{% static 'css/camera.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+		<script src="{% static 'js/script.js' %}"></script>
+		<script src="{% static 'js/superfish.js' %}"></script>
+		<script src="{% static 'js/jquery.ui.totop.js' %}"></script>
+		<script src="{% static 'js/jquery.equalheights.js' %}"></script>
+		<script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.js' %}"></script>
+		<script src="{% static 'js/camera.js' %}"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+		<!--<![endif]-->
+		<script src="{% static 'booking/js/booking.js' %}"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+			<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body class="page1" id="top">
+		<div class="main">
+<!--==============================header=================================-->
+			<header>
+				<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li class="current"><a href="{% url 'taxi_system:index' %}">Bosh menu</a></li>
+									<li><a href="{% url 'taxi_system:about' %}">Biz haqimizda</a></li>
+									<li><a href="{% url 'taxi_system:cars' %}">Mashinalar</a></li>
+									<li><a href="{% url 'taxi_system:services' %}">Xizmatlar</a></li>
+									<li><a href="{% url 'taxi_system:contact' %}">Bog`lanish</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href="{% url 'taxi_system:index' %}">
+								<img src="/static/images/logo.png" alt="Your Happy Family">
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+			<div class="slider_wrapper ">
+				<div id="camera_wrap" class="">
+					<div data-src="/static/images/slide.jpg" ></div>
+					<div data-src="/static/images/slide1.jpg" ></div>
+					<div data-src="/static/images/slide2.jpg"></div>
+				</div>
+			</div>
+			<div class="container_12">
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/static/images/icon1.png" alt="">
+								<div class="extra_wrapper">Tez &amp;
+									<div class="color1">Xavfsiz</div>
+								</div>
+							</div>
+					<br>
+					<br>
+					<br>
+					Bizning xizmatimiz tez va sifatlidir.Biz bilan doimo xavfsiz bolasiz va manzilingizga muddatidan oldin yetib borasiz😍
+							<a href="{% url 'taxi_system:services' %}" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/static/images/icon2.png" alt="">
+								<div class="extra_wrapper">Super
+									<div class="color1">Narxlar</div>
+								</div>
+							</div>
+					<br>	
+					<br>
+					<br>
+					Qulay taxi tizimida siz super chegirmalarga ega bolishingiz mumkin.Bizda xizmatlar juda ham arzondir
+							<a href="{% url 'taxi_system:services' %}" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/static/images/icon3.png" alt="">
+								<div class="extra_wrapper">Yetkazib berish
+									<div class="color1">Xizmati</div>
+								</div>
+							</div>
+						Qulay taxi orqali o`z mahsulotlaringizni O`zbekistonning istalgan xududiga istalgan vaqtda yuborishingiz mumkin.Bizda xizmatlar sifatli tez va juda ham arzondir
+							<a href="{% url 'taxi_system:services' %}" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="c_phone">
+				<div class="container_12">
+					<div class="grid_12">
+						<div class="fa fa-phone"></div> 1101
+						<span>Hoziroq boglaning</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+<!--==============================Content=================================-->
+			<div class="content"><div class="ic">Javlonbek Torajonov 2021 !<a href="www.instagram.com/javlonbektorajonov_007"></a></div>
+				<div class="container_12">
+					<div class="grid_5">
+						<h3>Buyurtma berish</h3>
+						<form id="bookingForm" method="POST">
+					{% csrf_token %}
+							<div class="fl1">
+								<div class="tmInput" name="Comfort">
+									<input name="Name" placeHolder="Ismingiz:" type="text">
+								</div>
+								<div class="tmInput">
+									<input name="From" placeHolder="Qayerdan:" type="text">
+								</div>
+							</div>
+							<div class="fl1">
+								<div class="tmInput">
+									<input name="Email" placeHolder="Email:" type="text">
+								</div>
+								<div class="tmInput mr0">
+									<input name="To" placeHolder="Qayerga:" type="text">
+								</div>
+							</div>
+							<div class="clear"></div>
+							
+							<div class="tmInput">
+								<input name="Time" placeHolder="Soat nechchiga" type="text">
+							</div>
+							<div class="clear"></div>
+					
+							<label class="tmDatepicker">
+								<input type="text" name="Date"	placeHolder='20/05/2014'>
+							</label>
+							<div class="clear"></div>
+							<div class="tmRadio" name="Comfort">
+							
+								<input name="Comfort" type="radio" id="tmRadio0" data-class="tmSelect tmSelect2" data-constraints="">
+								<span>Arzon </span>
+								<input name="Comfort" type="radio" id="tmRadio1"data-class="tmSelect tmSelect2" data-constraints="">
+								<span>Standart</span>
+								<input name="Comfort" type="radio" id="tmRadio2"data-class="tmSelect tmSelect2" data-constraints="">
+								<span>Lyuks</span>
+							</div>
+							<div class="clear"></div>
+							<div class="fl1 fl2">
+								<em>Yolovchilar</em>
+								<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<div class="clear height1"></div>
+							</div>
+							<div class="fl1 fl2">
+								<em>Bolalar</em>
+								<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>
+							<div class="clear"></div>
+							<div class="tmTextarea">
+								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+							</div>
+							<button type="send" class="btn btn-dark">Yuborish</button>
+						</form>
+
+
+
+					</div>
+					<div class="grid_6 prefix_1">
+						<a href="{% url 'taxi_system:cars'%}" class="type"><img src="/static/images/page1_img1.jpg" alt=""><span class="type_caption">Tejamkor</span></a>
+						<a href="{% url 'taxi_system:cars' %}" class="type"><img src="/static/images/page1_img2.jpg" alt=""><span class="type_caption">Standard</span></a>
+						<a href="{% url 'taxi_system:cars'%}" class="type"><img src="/static/images/page1_img3.jpg" alt=""><span class="type_caption">Lyuks</span></a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+	<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Hoziroq qo`ngiroq qiling:</span>1101</div>
+						<div class="socials">
+						<a href="http://www.instagram.com/javlonbektorajonov_007" class="fa fa-instagram"></a>
+						<a href="http://www.facebook.com/JavlonbekCreator" class="fa fa-facebook"></a>
+						<a href="https://www.youtube.com/channel/UC8woriRcnbHFTFlH5iqWCkg" class="fa fa-youtube "></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand">Your<span class="color1">T</span>axi </div>
+						&copy; 2021	| <a href="http://www.instagram.com/javlonbektorajonov_007">Ximoyalangan xizmatlar</a> </div>Web sayt dizaynlashtirildi <a href="http://www.instagram.com/javlonbektorajonov_007" rel="follow">Javlonbek Torajonov tomonidan</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+		<script>
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
+			});
+		</script>
+	</body>
+</html>
+{% endblock %}
