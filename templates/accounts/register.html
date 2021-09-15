@@ -1,0 +1,12 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% block content %}
+	
+		<form action="" method="POST">
+			{{form.as_p}}
+			{% csrf_token %}
+			<input type="hidden" value="{{ next }}">
+			<input type="submit" value="Login">
+		</form>
+	
+{% endblock content %}
